@@ -5,11 +5,16 @@ import { DetailsComponent } from "./details/details.component";
 const routeConfig: Routes = [
     {
         path: '',
-        component: HomeComponent,
-        title: 'Home Page'
+        pathMatch: 'full',
+        redirectTo: 'list'
     },
     {
-        path: 'details/:id',
+        path: 'list',
+        component: HomeComponent,
+        title: 'List Page'
+    },
+    {
+        path: 'details/:index',
         component: DetailsComponent,
         title: 'Details Page'
     }
